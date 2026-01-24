@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Luxe Home Decor</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+
+body{
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://unsplash.com/photos/U9ps5Ek8JPA/download?force=true") center/cover fixed;
+color:#fff;
+}
+
+
+/* HEADER */
+header{ 
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(10px);
+padding:15px 40px;
+display:flex;justify-content:space-between;align-items:center
+}
+nav a{
+color:#fff;margin-left:20px;text-decoration:none;
+position:relative
+}
+nav a::after{
+content:"";position:absolute;left:0;bottom:-5px;
+width:0;height:2px;background:#ffd27d;
+transition:.3s
+}
+nav a:hover::after{width:100%}
+
+/* HERO */
+.hero{
+
+padding:120px;text-align:center;
+animation:fadeIn 1.5s ease
+}
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+/* SECTIONS */
+section{padding:40px}
+h2{margin-bottom:20px}
+
+/* PRODUCTS */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px
+}
+
+.product{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+border-radius:18px;
+border:1px solid rgba(255,255,255,.25);
+overflow:hidden;text-align:center;
+transition:.4s;
+box-shadow:0 10px 35px rgba(0,0,0,.4)
+}
+.product:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 20px 45px rgba(0,0,0,.6)
+}
+.product img{
+width:100%;height:220px;object-fit:cover;
+transition:.5s
+}
+.product:hover img{transform:scale(1.1)}
+.product p{color:#ffd27d;font-weight:bold}
+
+/* BUTTONS */
+button{
+background:linear-gradient(135deg,#d4af37,#b68d40);
+border:none;color:white;
+padding:10px 18px;border-radius:30px;
+cursor:pointer;transition:.3s
+}
+button:hover{
+transform:scale(1.05);
+box-shadow:0 5px 20px rgba(0,0,0,.6)
+}
+
+/* GLASS BOXES */
+.cart,.payment,.tracking,.contact{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+margin:30px;border-radius:20px;
+padding:25px;
+box-shadow:0 12px 40px rgba(0,0,0,.5);
+border:1px solid rgba(255,255,255,.25)
+}
+
+input,select{
+width:100%;padding:8px;margin-top:8px;
+background:rgba(255,255,255,.25);
+border:none;color:#fff;border-radius:6px
+}
+input::placeholder{color:#eee}
+
+/* PAYMENT ICONS */
+.payment-icons img{
+width:90px;margin:10px;padding:6px;
+background:white;border-radius:12px;
+transition:.3s;cursor:pointer
+}
+.payment-icons img:hover{
+transform:scale(1.15);
+box-shadow:0 5px 15px rgba(0,0,0,.6)
+}
+
+/* TRACKING */
+.progress div{
+padding:10px;margin:6px 0;
+border-left:5px solid rgba(255,255,255,.4);
+opacity:.7;transition:.4s
+}
+.progress .active{
+opacity:1;
+border-color:#ffd27d;
+background:rgba(255,255,255,.2)
+}
+
+/* MAP */
+iframe{
+width:100%;height:300px;border:none;
+border-radius:15px;margin-top:15px
+}
+
+footer{
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(10px);
+text-align:center;padding:15px
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Luxe Home Decor</h2>
+<nav>
+<a href="#decor">Home Decor</a>
+<a href="#murti">Goddess Murti</a>
+<a href="#cart">Cart (<span id="count">0</span>)</a>
+</nav>
+</header>
+
+<div class="hero">
+<h1>Premium Home Decor & Divine Murtis</h1>
+<p>Luxury • Devotion • Elegance</p>
+</div>
+
+<section id="decor">
+<h2>Home Decor</h2>
+<div class="products" id="decorProducts"></div>
+</section>
+
+<section id="murti">
+<h2>Goddess Murti</h2>
+<div class="products" id="murtiProducts"></div>
+</section>
+
+<section id="cart" class="cart">
+<h2>Your Cart</h2>
+<div id="cartItems"></div>
+<h3>Total: ₹<span id="total">0</span></h3>
+
+<label>Choose EMI</label>
+<select id="emi" onchange="calculateEMI()">
+<option value="0">No EMI</option>
+<option value="3">3 Months (12% p.a)</option>
+<option value="6">6 Months (14% p.a)</option>
+<option value="12">12 Months (16% p.a)</option>
+</select>
+
+<p id="emiResult"></p>
+<button onclick="openPayment()">Proceed to Payment</button>
+</section>
+
+<section id="payment" class="payment" style="display:none">
+<h2>Select Payment</h2>
+<div class="payment-icons">
+<img src="https://static0.anpoimages.com/wordpress/wp-content/uploads/2020/11/05/Google-Pay-India-Tez-new-icon.jpg" onclick="pay('GPay')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo4x8kSTmPUq4PFzl4HNT0gObFuEhivHOFYg&s" onclick="pay('PhonePe')">
+<img src="https://static.vecteezy.com/system/resources/thumbnails/051/336/375/small/paytm-upi-transparent-icon-free-png.png" onclick="pay('Paytm')">
+</div>
+<button onclick="pay('Card / EMI')">Pay Now</button>
+</section>
+
+<section class="tracking">
+<h2>Order Tracking</h2>
+<input placeholder="Enter Order ID">
+<button onclick="track()">Track</button>
+<div class="progress" id="progress"></div>
+</section>
+
+<section class="contact">
+<h2>Contact Us</h2>
+<p>Email: support@luxedecor.com</p>
+<p>Phone: +91 99999 88888</p>
+<iframe src="https://www.google.com/maps?q=Delhi&output=embed"></iframe>
+</section>
+
+<footer>© 2026 Luxe Home Decor</footer>
+
+<script>
+
+
+ const decor = [
+{id:1, name:"Modern Sofa Set", price:25999, img:"https://unsplash.com/photos/9MpGYu0bk8o/download?force=true"},
+{id:2, name:"Elegant Wall Clock", price:3999, img:"https://unsplash.com/photos/GLmDUYIZ-No/download?force=true"},
+{id:3, name:"Wooden Coffee Table", price:7499, img:"https://unsplash.com/photos/Rwb3barsoH8/download?force=true"},
+{id:4, name:"Decorative Floor Vase", price:2899, img:"https://unsplash.com/photos/cPPdgRkuadE/download?force=true"},
+{id:5, name:"Artistic Canvas Wall Art", price:4999, img:"https://unsplash.com/photos/APEgRlWpkWU/download?force=true"},
+{id:6, name:"Luxury Table Lamp", price:3199, img:"https://unsplash.com/photos/_HvSuK_9Paw/download?force=true"},
+{id:7, name:"Stylish Cushion Set", price:1599, img:"https://unsplash.com/photos/dbH_vy7vICE/download?force=true"},
+{id:8, name:"Minimal Wall Decor", price:2299, img:"https://unsplash.com/photos/xdFtwRLHMck/download?force=true"},
+{id:9, name:"Elegant Bookshelf", price:9999, img:"https://unsplash.com/photos/37tuUo-Oa-M/download?force=true"},
+{id:10, name:"Designer Floor Rug", price:7999, img:"https://unsplash.com/photos/s89odYa1vIY/download?force=true"},
+{id:11, name:"Decorative Wall Mirror", price:4599, img:"https://unsplash.com/photos/qtZxottSD0Y/download?force=true"},
+{id:12, name:"Artistic Painting", price:5999, img:"https://unsplash.com/photos/FfYk3p_3RIk/download?force=true"},
+{id:13, name:"Wooden Center Table", price:8499, img:"https://unsplash.com/photos/bUmtYSRQpHs/download?force=true"},
+{id:14, name:"Modern Desk Lamp", price:2499, img:"https://unsplash.com/photos/NhgvBxbVGN4/download?force=true"},
+{id:15, name:"Sculptural Decor Piece", price:3999, img:"https://unsplash.com/photos/gIBd-dkC4ag/download?force=true"},
+{id:16, name:"Indoor Plant Set", price:2999, img:"https://unsplash.com/photos/NqvMYeMgPsg/download?force=true"},
+{id:17, name:"Handcrafted Wall Hanging", price:3499, img:"https://unsplash.com/photos/n2QvH2eKtaE/download?force=true"},
+{id:18, name:"Luxury Bedside Table", price:8999, img:"https://unsplash.com/photos/_LdMEMLYw6g/download?force=true"},
+{id:19, name:"Artistic Candle Holder", price:1499, img:"https://unsplash.com/photos/NFR8buObeSI/download?force=true"},
+{id:20, name:"Decorative Clock", price:2799, img:"https://unsplash.com/photos/Lz-mtHH_kKI/download?force=true"},
+{id:21, name:"Minimal Ceramic Vase", price:1999, img:"https://unsplash.com/photos/RCbvuluV6iw/download?force=true"},
+{id:22, name:"Wooden Photo Frame", price:999, img:"https://m.media-amazon.com/images/I/71-4aHbUD9L.jpg"},
+{id:23, name:"Modern Wall Shelf", price:3999, img:"https://unsplash.com/photos/HWPETLBkCLc/download?force=true"},
+{id:24, name:"Designer Floor Lamp", price:4999, img:"https://unsplash.com/photos/jChpaurkYgs/download?force=true"},
+{id:25, name:"Luxury Sofa Pillow", price:899, img:"https://unsplash.com/photos/xpkRCGZ8wUU/download?force=true"},
+{id:26, name:"Wall Art Frame", price:3599, img:"https://unsplash.com/photos/DB-jSLNZMqM/download?force=true"},
+{id:27, name:"Decorative Jar Set", price:2499, img:"https://unsplash.com/photos/7f6KCmyAB-M/download?force=true"},
+{id:28, name:"Stylish Chair", price:6999, img:"https://unsplash.com/photos/Y9iAaT2my2I/download?force=true"},
+{id:29, name:"Wooden Coffee Tray", price:1499, img:"https://unsplash.com/photos/jSzmygRMK9M/download?force=true"},
+{id:30, name:"Handmade Wall Basket", price:2999, img:"https://unsplash.com/photos/JOWxC-h1GCw/download?force=true"},
+{id:31, name:"Modern TV Stand", price:10999, img:"https://unsplash.com/photos/UypYlo6xq6o/download?force=true"},
+{id:32, name:"Decorative Pendant Light", price:5999, img:"https://unsplash.com/photos/Ib3CmV3Rx-s/download?force=true"},
+{id:33, name:"Artistic Wall Panel", price:7999, img:"https://unsplash.com/photos/M6D7jxCHmss/download?force=true"},
+{id:34, name:"Luxury Pouf", price:3499, img:"https://unsplash.com/photos/44jFjM4IpwU/download?force=true"},
+{id:35, name:"Minimal Desk Organizer", price:1299, img:"https://unsplash.com/photos/VrpzMC1lI0Q/download?force=true"},
+{id:36, name:"Sculpted Figurine Set", price:3999, img:"https://unsplash.com/photos/OOgFdIdkYD4/download?force=true"},
+{id:37, name:"Decorative Lantern", price:1799, img:"https://unsplash.com/photos/AhgXKPZMXoo/download?force=true"},
+{id:38, name:"Modern Wall Clock", price:2999, img:"https://unsplash.com/photos/IeA3bCpHJmU/download?force=true"},
+{id:39, name:"Luxury Curtain Set", price:4999, img:"https://unsplash.com/photos/OQLV2kNPSQU/download?force=true"},
+{id:40, name:"Designer Wall Hook", price:899, img:"https://plus.unsplash.com/premium_photo-1755534537657-0a8a9bf1cc46?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fFdBTEwlMjBIT09LfGVufDB8fDB8fHww"},
+{id:41, name:"Wooden Plant Stand", price:2199, img:"https://unsplash.com/photos/htwP0jp16ro/download?force=true"},
+{id:42, name:"Artistic Table Decor", price:1599, img:"https://unsplash.com/photos/lHE1WQ0DvWE/download?force=true"},
+{id:43, name:"Modern Wall Shelf", price:3299, img:"https://unsplash.com/photos/bNlK4UjWT_8/download?force=true"},
+{id:44, name:"Luxury Sofa Throw", price:1499, img:"https://unsplash.com/photos/gK8LS7vFdNI/download?force=true"},
+{id:45, name:"Handcrafted Mirror", price:4599, img:"https://unsplash.com/photos/tSK4UQVhudg/download?force=true"},
+{id:46, name:"Decorative Ceramic Bowl", price:1999, img:"https://unsplash.com/photos/ljRQjDdoBZE/download?force=true"},
+{id:47, name:"Stylish Wall Light", price:2899, img:"https://unsplash.com/photos/-fx6CX6466g/download?force=true"},
+{id:48, name:"Wooden Jewelry Box", price:999, img:"https://unsplash.com/photos/opEeiIHyM-k/download?force=true"},
+{id:49, name:"Minimal Table Lamp", price:2399, img:"https://unsplash.com/photos/ODApypoKcsE/download?force=true"},
+{id:50, name:"Artistic Wall Clock", price:2999, img:"https://unsplash.com/photos/G66TCdcgihA/download?force=true"}
+];
+
+
+
+const murti = [
+{id:101, name:"Maa Durga ji Idol", price:4999, img:"https://rukminim2.flixcart.com/image/480/640/ku04o7k0/showpiece-figurine/w/6/b/11-25-decorated-goddess-maa-durga-idol-handmade-terracotta-or-original-imag77c2ghj8pfuq.jpeg?q=90"},
+{id:102, name:"Goddess Lakshmi ji Murti", price:5499, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb0vGUcryjyhZkU83k7T1V69JUuV9hq_R7RA&s"},
+{id:103, name:"Ganesh ji Idol Sculpture", price:5999, img:"https://m.media-amazon.com/images/I/71eeGKqynQL._AC_UF894,1000_QL80_.jpg"},
+{id:104, name:"Saraswati Maa Murti", price:4799, img:"https://assets0.mirraw.com/images/10406117/G99SP004-PB_0_zoom.jpg?1654668523"},
+{id:105, name:"ShivJi Idol", price:6299, img:"https://plus.unsplash.com/premium_photo-1676804546636-b3896c0ea065?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2hpdmElMjBzdGF0dWV8ZW58MHx8MHx8fDA%3D"},
+{id:106, name:"Parvati Maa Murti", price:4599, img:"https://rukminim2.flixcart.com/image/480/640/klfhk7k0/showpiece-figurine/k/m/h/1902-green-value-original-imagykycetdjesgd.jpeg?q=90"},
+{id:107, name:"Vishnuji Idol", price:6999, img:"https://haridwargangajal.in/wp-content/uploads/2025/06/182-1.png"},
+{id:108, name:"Panchmukhi Hanuman Ji Murti", price:5999, img:"https://m.media-amazon.com/images/I/61n2ivZHGuL._AC_UF894,1000_QL80_.jpg"},
+{id:109, name:"Krishna ji Idol", price:5499, img:"https://artehouse.in/cdn/shop/files/krishna-idol-with-cow-indoor.jpg?v=1706329552"},
+{id:110, name:"Radha Krishna Murti", price:6499, img:"https://m.media-amazon.com/images/I/710oJtiv-pL._AC_UF894,1000_QL80_.jpg"},
+{id:111, name:"Hanumanji Idol", price:4999, img:"https://images.jdmagicbox.com/quickquotes/images_main/elegant-glossy-white-and-gold-lord-hanuman-statue-2228620061-goau30cw.jpg"},
+{id:112, name:"Durga Maa Sitting Idol", price:6999, img:"https://images-cdn.ubuy.co.in/68fabd5a43d7d8a93d0e301d-esplanade-maa-durga-mata-rani-idol.jpg"},
+{id:113, name:"Shiv Parvati Idol", price:7999, img:"https://c8.alamy.com/comp/F6NC9M/idol-of-lord-shiva-and-parvati-india-asia-F6NC9M.jpg"},
+{id:114, name:"Lakshmi Ganesh Murti", price:5999, img:"https://assets.giftalove.com/resources/common/giftimages/productimage1/GL19087_1.jpg"},
+{id:115, name:"Vishnu Lakshmi Idol", price:6999, img:"https://cdn.moolwan.com/SB_VL_545CJ_01__Vishnu%20Lakshmi%20545CJ%20(1).jpg"},
+{id:116, name:"Kuber Murti", price:5499, img:"https://images-cdn.ubuy.co.in/63513531e279ad24e331d87e-shubhanjaliterracotta-god-of-wealth.jpg"},
+{id:117, name:"Ganeshji Small Idol", price:3499, img:"https://media-wallmantra.com/product/original/wallmantra-small-decorative-ganesh-idol-playing-flute-showpiece-4F68.jpg"},
+{id:118, name:"Maa Durga Standing Idol", price:7999, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN9y10FOO6861ZJ8i355cy6-y8HkMWZYllAQ&s"},
+{id:119, name:"Shivling ", price:6999, img:"https://images-cdn.ubuy.co.in/650eb7a7f38af56b586aac0e-brass-shivling-idol-statue-lord-shiva.jpg"},
+{id:120, name:"Krishnaji Flute Idol", price:5999, img:"https://images-cdn.ubuy.co.in/68971d2cd1946f31ed0c27b6-sri-krishna-culture-new-hand-crafted.jpg"}
+];
+
+let cart=[],total=0;
+
+function load(arr,id){
+const d=document.getElementById(id);
+arr.forEach(p=>{
+d.innerHTML+=`
+<div class="product">
+<img src="${p.img}">
+<h3>${p.name}</h3>
+<p>₹${p.price}</p>
+<button onclick="add(${p.id})">Add to Cart</button>
+</div>`;
+});
+}
+load(decor,"decorProducts");
+load(murti,"murtiProducts");
+
+function add(id){
+const item=[...decor,...murti].find(p=>p.id===id);
+cart.push(item);total+=item.price;
+document.getElementById("count").innerText=cart.length;
+render();
+}
+
+function render(){
+const d=document.getElementById("cartItems");
+d.innerHTML="";
+cart.forEach(i=>d.innerHTML+=`<p>${i.name} - ₹${i.price}</p>`);
+document.getElementById("total").innerText=total;
+calculateEMI();
+}
+
+function calculateEMI(){
+const m=document.getElementById("emi").value;
+if(m==0){document.getElementById("emiResult").innerText="";return;}
+const rate={3:12,6:14,12:16}[m]/100;
+const interest=total*rate*(m/12);
+const payable=total+interest;
+document.getElementById("emiResult").innerText=
+`Monthly EMI: ₹${(payable/m).toFixed(0)} | Total Payable: ₹${payable.toFixed(0)}`;
+}
+
+function openPayment(){
+document.getElementById("payment").style.display="block";
+}
+
+function pay(method){
+alert("Payment Successful via "+method+" ✅");
+}
+
+function track(){
+const d=document.getElementById("progress");
+d.innerHTML="";
+["Order Placed","Payment Confirmed","Packed","Shipped","Out for Delivery","Delivered"]
+.forEach((s,i)=>{
+setTimeout(()=>{
+d.innerHTML+=`<div class="active">${i+1}. ${s}</div>`;
+},i*300);
+});
+}
+</script>
+
+</body>
+</html>
