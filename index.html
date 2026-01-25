@@ -17,27 +17,42 @@ color:#fff;
 
 /* HEADER */
 header{ 
-background:rgba(0,0,0,.6);
-backdrop-filter:blur(10px);
+background: linear-gradient( to right, rgba(0,0,0,.75),rgba(30,30,30,.6));
+backdrop-filter: (18px);
+box-shadow: 0 10px 30px rgba(0,0,0,.6);
 padding:15px 40px;
 display:flex;justify-content:space-between;align-items:center
 }
 nav a{
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    letter-spacing: .5px;
 color:#fff;margin-left:20px;text-decoration:none;
 position:relative
-}
+};
 nav a::after{
-content:"";position:absolute;left:0;bottom:-5px;
-width:0;height:2px;background:#ffd27d;
+content:"";position:absolute; inset:0; background: rgba(0,0,0.25);
 transition:.3s
 }
-nav a:hover::after{width:100%}
+nav a:hover::after{ background: rgba(255,210,125,.18);
+    color:#ffd27d
+    
+    
+    }
 
 /* HERO */
 .hero{
 
-padding:120px;text-align:center;
+padding:140px 20px; text-shadow: 0 5px 20px rgba(0,0,0,.8);  text-align:center;
 animation:fadeIn 1.5s ease
+}
+.hero h1{
+    font-family:'Playfair Display',serif; font-size: 48px;
+}
+.hero p{
+    margin-top: 10px;
+    letter-spacing: 3px;
 }
 @keyframes fadeIn{
 from{opacity:0;transform:translateY(30px)}
@@ -56,17 +71,23 @@ gap:25px
 }
 
 .product{
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(12px);
+border-radius: 28px;
 border-radius:18px;
 border:1px solid rgba(255,255,255,.25);
 overflow:hidden;text-align:center;
 transition:.4s;
 box-shadow:0 10px 35px rgba(0,0,0,.4)
 }
+.product h3{
+    font-family: 'Playfair Display',serif;
+    font-size: 18px;
+}
+.product p{
+    letter-spacing: .5px;
+}
 .product:hover{
 transform:translateY(-12px) scale(1.03);
-box-shadow:0 20px 45px rgba(0,0,0,.6)
+box-shadow:0 20px 45px rgba(0,0,0,.6),inset 0 0 25px rgba(255,255,255,.1);
 }
 .product img{
 width:100%;height:220px;object-fit:cover;
@@ -137,6 +158,13 @@ footer{
 background:rgba(0,0,0,.6);
 backdrop-filter:blur(10px);
 text-align:center;padding:15px
+}
+@media(max-width:768px){
+    .hero h1{font-size:30px}
+    .intro-box{margin:-40px 15px 309px}
+}
+@media(max-width:480px){
+    .hero h1{font-size: 24px;}
 }
 </style>
 </head>
@@ -355,3 +383,4 @@ d.innerHTML+=`<div class="active">${i+1}. ${s}</div>`;
 
 </body>
 </html>
+
