@@ -49,7 +49,7 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            background-image: url(https://unsplash.com/photos/fucCwBs2GYE/download?force=true); 
+            background-image: url(https://unsplash.com/photos/g3zGVMHDNdY/download?force=true); 
             background-size: cover;
             background-position: center;
         }
@@ -434,17 +434,38 @@ h1, h2, h3, h4, h5, h6 {
 </head>
 <body>
 
-<header>
-    <div class="logo">AstroMaster</div>
+<header style="
+    width:100%; 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    z-index:9999; 
+    background:#0b0015; 
+    padding:15px 30px; 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center;
+    border-bottom:1px solid #3a0060;
+">
 
-    <nav>
-        <ul style="list-style:none; display:flex; gap:30px; margin:0; padding:0; align-items:center;">
-            <li><a href="#zodiac">Zodiac Signs</a></li>
-            <li><a href="#horoscope">Horoscope</a></li>
-            <li><a href="#charts">Astro Charts</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#" onclick="openLogin()">Login</a></li>
+    <!-- LOGO -->
+    <div class="logo" style="color:#FFD700; font-size:28px; font-weight:bold;">
+        AstroMaster
+    </div>
+
+    <!-- NAV MENU -->
+    <nav style="display:flex; align-items:center; gap:40px;">
+
+        <ul style="list-style:none; display:flex; gap:30px; margin:0; padding:0;">
+            <li><a href="#zodiac" style="color:white; text-decoration:none;">Zodiac Signs</a></li>
+            <li><a href="#horoscope" style="color:white; text-decoration:none;">Horoscope</a></li>
+            <li><a href="#charts" style="color:white; text-decoration:none;">Astro Charts</a></li>
+            <li><a href="#contact" style="color:white; text-decoration:none;">Contact</a></li>
+            <li><a href="#" onclick="openLogin()" style="color:white; text-decoration:none;">Login</a></li>
         </ul>
+
+        
+
     </nav>
 </header>
 
@@ -462,84 +483,84 @@ h1, h2, h3, h4, h5, h6 {
 
         <!-- Aries -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://dgnwtc8qwiv0c.cloudfront.net/aries.jpg" alt="Aries" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFnJpMa_SqsjiRcp8wYIhEnBBWzKceVYWY0w&s" alt="Aries" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Aries</h3>
             <p style="font-size:14px;">21 March - 19 April: Bold, courageous, direct, passionate, leadership</p>
         </div>
 
         <!-- Taurus -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://astrology.newkerala.com/horoscope/daily/images/taurus.webp" alt="Taurus" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/taurus.webp" alt="Taurus" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Taurus</h3>
             <p style="font-size:14px;">April 20 - May 20: Loyal, steady, practical, comfort-loving, reliable, stubborn</p>
         </div>
 
         <!-- Gemini -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://www.astrodevam.com/media/wysiwyg/Gemini.jpg" alt="Gemini" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/gemini.webp" alt="Gemini" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Gemini</h3>
             <p style="font-size:14px;">May 21 - June 20: Curious, adaptable, social, communicative, versatile</p>
         </div>
 
         <!-- Cancer -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://static.toiimg.com/thumb/msid-111804850,width-1280,height-720,resizemode-4/111804850.jpg" alt="Cancer" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/cancer.webp" alt="Cancer" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Cancer</h3>
             <p style="font-size:14px;">June 21 - July 22: Nurturing, intuitive, protective, emotional, sensitive</p>
         </div>
 
         <!-- Leo -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://img.freepik.com/premium-vector/lion-zodiac-sign-round-avatar-constellation-circle-icon-astrology-calendar-element-destiny-by-stars-month-birth-horoscope-profile-flat-isolated-vector-illustration-white-background_633472-8696.jpg?w=360" alt="Leo" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/leo.webp" alt="Leo" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Leo</h3>
             <p style="font-size:14px;">July 23 - August 22: Confident, warm, creative, charismatic, generous </p>
         </div>
 
         <!-- Virgo -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://www.astrologerumesh.com/wp-content/uploads/2021/09/Virgo-Zodiac-Sign.jpg" alt="Virgo" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/virgo.webp" alt="Virgo" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Virgo</h3>
             <p style="font-size:14px;">August 23 - September 22: Detail-oriented, practical, analytical, thoughtful, perfectionistic</p>
         </div>
 
         <!-- Libra -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://masavitrijyotish.com/wp-content/uploads/2024/08/7.png" alt="Libra" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/libra.webp" alt="Libra" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Libra</h3>
             <p style="font-size:14px;">September 23 - October 22: Diplomatic, charming, fair, harmony-seeking</p>
         </div>
 
         <!-- Scorpio -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://media.assettype.com/outlookindia/2024-09-28/wvexw0wu/8.jpg?w=801&auto=format%2Ccompress&fit=max&format=webp&dpr=1.0" alt="Scorpio" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/scorpio.webp" alt="Scorpio" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Scorpio</h3>
             <p style="font-size:14px;">October 23 - November 21: Intense, insightful, loyal, resourceful, passionate</p>
         </div>
 
         <!-- Sagittarius -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://masavitrijyotish.com/wp-content/uploads/2024/08/9.png" alt="Sagittarius" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMkEXosoIovXYdcFQizo-7vv07Ik1nSxj3tw&s" alt="Sagittarius" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Sagittarius</h3>
             <p style="font-size:14px;">November 22 - December 21: Adventurous, honest, free-spirited, optimistic</p>
         </div>
 
         <!-- Capricorn -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://masavitrijyotish.com/wp-content/uploads/2024/08/10-300x300.png.webp" alt="Capricorn" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/capricorn.webp" alt="Capricorn" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Capricorn</h3>
             <p style="font-size:14px;">December 22 - January 19: Determined, responsible, disciplined, ambitious, grounded</p>
         </div>
 
         <!-- Aquarius -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://masavitrijyotish.com/wp-content/uploads/2024/08/11.png" alt="Aquarius" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/aquarius.webp" alt="Aquarius" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Aquarius</h3>
             <p style="font-size:14px;">January 20 - February 18:  Independent, original, visionary, intellectual</p>
         </div>
 
         <!-- Pisces -->
         <div class="zodiac-card" style="background: rgba(255,255,255,0.1); padding:20px; width:180px; text-align:center; border-radius:15px; transition:0.3s; cursor:pointer;">
-            <img src="https://static.toiimg.com/thumb/msid-111810732,width-400,resizemode-4/111810732.jpg" alt="Pisces" style="width:100px; height:100px; margin-bottom:15px;">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/pisces.webp" alt="Pisces" style="width:150px; height:150px; margin-bottom:15px;">
             <h3 style="font-family:'Playfair Display', serif;">Pisces</h3>
             <p style="font-size:14px;">February 19 - March 20: Empathetic, imaginative, gentle, intuitive, sensitive</p>
         </div>
@@ -621,19 +642,19 @@ h1, h2, h3, h4, h5, h6 {
 
         <!-- Natal Chart -->
         <div class="chart-card" style="position:relative; width:280px; border-radius:20px; overflow:hidden; cursor:pointer; transition:0.3s;">
-            <img src="https://cdn.britannica.com/45/104045-050-116C1F93/Signs-of-the-Zodiac-astrology.jpg" alt="Natal Chart" style="width:100%; height:auto; display:block; filter: brightness(0.85); transition:0.3s;">
+            <img src="https://starsignstyle.com/wp-content/uploads/2021/08/the-aries-rising-birth-chart.jpg" alt="Natal Chart" style="width:100%; height:auto; display:block; filter: brightness(0.85); transition:0.3s;">
             <div class="chart-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; opacity:0; background: rgba(0,0,0,0.6); color:#FFD700; font-size:20px; font-weight:600; transition:0.3s;">View Natal Chart</div>
         </div>
 
         <!-- Zodiac Wheel -->
         <div class="chart-card" style="position:relative; width:280px; border-radius:20px; overflow:hidden; cursor:pointer; transition:0.3s;">
-            <img src="https://benebellwen.com/wp-content/uploads/2024/08/how-to-give-a-birth-chart-reading.jpg" alt="Zodiac Wheel" style="width:100%; height:auto; display:block; filter: brightness(0.85); transition:0.3s;">
+            <img src="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-astrology-clipart-the-zodiac-is-shown-on-a-round-wheel-cartoon-vector-png-image_6796864.png" alt="Zodiac Wheel" style="width:100%; height:auto; display:block; filter: brightness(0.85); transition:0.3s;">
             <div class="chart-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; opacity:0; background: rgba(0,0,0,0.6); color:#FFD700; font-size:20px; font-weight:600; transition:0.3s;">View Zodiac Wheel</div>
         </div>
 
         <!-- Planetary Positions -->
         <div class="chart-card" style="position:relative; width:280px; border-radius:20px; overflow:hidden; cursor:pointer; transition:0.3s;">
-            <img src="https://www.astro-seek.com/seek-images/radix/birth-chart-astrology-planets-signs-houses-explained.webp" alt="Planetary Chart" style="width:100%; height:auto; display:block; filter: brightness(0.85); transition:0.3s;">
+            <img src="https://appliedjyotish.com/assets/frontend/current-planate/chart-text.png" alt="Planetary Chart" style="width:100%; height:auto; display:block; filter: brightness(0.85); transition:0.3s;">
             <div class="chart-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; opacity:0; background: rgba(0,0,0,0.6); color:#FFD700; font-size:20px; font-weight:600; transition:0.3s;">View Planetary Chart</div>
         </div>
 
@@ -655,25 +676,25 @@ h1, h2, h3, h4, h5, h6 {
     <div class="features-container" style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
 
         <div class="feature-card" style="background: rgba(255,255,255,0.05); padding:30px; width:250px; border-radius:20px; text-align:center; transition:0.3s; cursor:pointer;">
-            <img src="https://onepagehoroscope.com/_next/image?url=https%3A%2F%2Fonepagehoroscope.com%2Fonepage-images%2Fpredictions%2Fimg%2Frole-of-life-prediction.webp&w=640&q=75" alt="Personalized Report" style="width:180px; margin-bottom:20px;">
+            <img src="https://merabhavishya.in/wp-content/uploads/2025/09/Basic-Product-Final-600x900.png" alt="Personalized Report" style="width:180px; margin-bottom:20px;">
             <h3>Personalized Reports</h3>
             <p>Detailed birth chart and life predictions tailored for you.</p>
         </div>
 
         <div class="feature-card" style="background: rgba(255,255,255,0.05); padding:30px; width:250px; border-radius:20px; text-align:center; transition:0.3s; cursor:pointer;">
-            <img src="https://img.freepik.com/free-photo/happy-couple-holding-heart-signs_53876-46854.jpg?semt=ais_hybrid&w=740&q=80" alt="Love Compatibility" style="width:180px; margin-bottom:20px;">
+            <img src="https://miro.medium.com/1*JtsIc9_6gKIBiRpNZye9yQ.jpeg" alt="Love Compatibility" style="width:180px; margin-bottom:20px;">
             <h3>Love Compatibility</h3>
             <p>Discover relationship compatibility based on your zodiac signs.</p>
         </div>
 
         <div class="feature-card" style="background: rgba(255,255,255,0.05); padding:30px; width:250px; border-radius:20px; text-align:center; transition:0.3s; cursor:pointer;">
-            <img src="https://tellpanditji.com/wp-content/uploads/2024/07/Untitled-design-4.png" alt="Career Predictions" style="width:180px; margin-bottom:20px;">
+            <img src="https://onepagehoroscope.com/onepage-images/predictions/img/career-horoscope.webp" alt="Career Predictions" style="width:180px; margin-bottom:20px;">
             <h3>Career Predictions</h3>
             <p>Know the best career moves and financial opportunities ahead.</p>
         </div>
 
         <div class="feature-card" style="background: rgba(255,255,255,0.05); padding:30px; width:250px; border-radius:20px; text-align:center; transition:0.3s; cursor:pointer;">
-            <img src="https://bookaexpert.com/uploads/subcategory_images/1736791347astrologer_381_286.jpg" alt="Premium Consultations" style="width:180px; margin-bottom:20px;">
+            <img src="https://jyotirvastuacademy.org/_next/image?url=https%3A%2F%2Fjva-nestjs-app-documents.s3.eu-north-1.amazonaws.com%2Fdocuments%2F6e5da4b9-5aea-4d34-af50-5292dc942e47-Muhurtha%20Reading_Consultations_1080x1080.jpg&w=3840&q=75" alt="Premium Consultations" style="width:180px; margin-bottom:20px;">
             <h3>Premium Consultations</h3>
             <p>Talk with professional astrologers for life-changing guidance.</p>
         </div>
@@ -709,7 +730,7 @@ h1, h2, h3, h4, h5, h6 {
 
         <!-- Box 1 -->
         <div style="width:280px; background:#1b0033; padding:30px; border-radius:20px; text-align:center;">
-            <img src="https://ravishankarguruji.com/wp-content/uploads/2025/05/7.webp" style="width:180px;">
+            <img src="https://cdn0.weddingwire.in/vendor/9764/3_2/640/png/good-astrologer-in-bangalore_15_449764-176285332142040.jpeg" style="width:220px;">
             <h3 style="margin:15px 0;">Book an Astrologer</h3>
             <p>Schedule detailed Kundli reading for accurate predictions.</p>
             <button style="margin-top:15px; padding:10px 20px; background:#ffcc00; border:none; border-radius:10px; cursor:pointer;">
@@ -719,7 +740,7 @@ h1, h2, h3, h4, h5, h6 {
 
         <!-- Box 2 -->
         <div style="width:280px; background:#1b0033; padding:30px; border-radius:20px; text-align:center;">
-            <img src="https://img.freepik.com/premium-vector/mobile-phone-icon-comic-style-telephone-talk-cartoon-vector-illustration-white-isolated-background-hotline-contact-splash-effect-business-concept_157943-12185.jpg" style="width:180px;">
+            <img src="https://play-lh.googleusercontent.com/160YB_nljP-iv880b_Pz3iRUR-G3d5lsoIcmIJumlK7JihtW6OUcnZSW4XvWq_NYYMhH=w240-h480-rw" style="width:180px;">
             <h3 style="margin:15px 0;">Talk to Astrologer</h3>
             <p>Instant talk with expert astrologers for any life problem.</p>
             <button style="margin-top:15px; padding:10px 20px; background:#ffcc00; border:none; border-radius:10px; cursor:pointer;">
@@ -729,7 +750,7 @@ h1, h2, h3, h4, h5, h6 {
 
         <!-- Box 3 -->
         <div style="width:280px; background:#1b0033; padding:30px; border-radius:20px; text-align:center;">
-            <img src="https://media.npr.org/assets/img/2010/05/13/07_amar_20_2_0816_slide-7524e58cfdb64af166c7fd58f779e8d84e56f6f0.jpg" style="width:180px;">
+            <img src="https://unsplash.com/photos/-aCFcojh42g/download?force=true" style="width:235px;">
             <h3 style="margin:15px 0;">Book a Pooja</h3>
             <p>Book online pooja & rituals for peace, health & positivity.</p>
             <button style="margin-top:15px; padding:10px 20px; background:#ffcc00; border:none; border-radius:10px; cursor:pointer;">
@@ -1172,7 +1193,7 @@ function calcNumerology(){
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:25px; margin-top:40px;">
         
         <div style="background:#13001f; padding:25px; border-radius:15px; text-align:center;">
-            <img src="https://static.toiimg.com/thumb/msid-119973194,width-400,resizemode-4/Aries.jpg">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/aries.webp" width="300px">
             <h3>Aries</h3>
             <p><strong>Today:</strong> Energies favor career growth.</p>
             <p><strong>Weekly:</strong> Relationships strengthen.</p>
@@ -1180,7 +1201,7 @@ function calcNumerology(){
         </div>
 
         <div style="background:#13001f; padding:25px; border-radius:15px; text-align:center;">
-            <img src="https://c.ndtvimg.com/2025-01/ci5pmm18_taurus_625x300_03_January_25.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738" width="350px">
+            <img src="https://astrology.newkerala.com/horoscope/daily/images/taurus.webp" width="300px">
             <h3>Taurus</h3>
             <p><strong>Today:</strong> Stay calm, avoid arguments.</p>
             <p><strong>Weekly:</strong> Good progress in studies.</p>
@@ -1198,7 +1219,7 @@ function calcNumerology(){
         <div id="testimonialSlider" style="display:flex; transition:0.7s;">
             
             <div class="tBox" style="min-width:100%; padding:40px; background:#1a0030; border-radius:25px; text-align:center;">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/049/174/246/small/a-smiling-young-indian-man-with-formal-shirts-outdoors-photo.jpg" style="width:120px; height:120px; object-fit:cover; border-radius:50%; margin-bottom:15px;">
+                <img src="https://plus.unsplash.com/premium_photo-1691030254390-aa56b22e6a45?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aW5kaWFuJTIwbWFufGVufDB8fDB8fHww" style="width:120px; height:120px; object-fit:cover; border-radius:50%; margin-bottom:15px;">
 
                 <p style="font-size:20px;">“Accurate horoscope and remedies. Helped me make career decisions.”</p>
                 <h3 style="margin-top:10px; color:#FFD700;">— Rohan Sharma</h3>
@@ -1235,7 +1256,7 @@ setInterval(()=>{
     <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:50px;">
 
         <div style="width:280px; background:#26004d; padding:20px; border-radius:25px; text-align:center; box-shadow:0 0 20px rgba(255,215,0,0.2);">
-            <img src="https://sohinisastri.com/wp-content/uploads/2025/01/DrSohiniSastri.webp" style="width:150px; height:150px; border-radius:50%; object-fit:cover;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ZMWmFKRlkwK1jvIOwyKM-jLVqj_bVY3I9w&s" style="width:150px; height:150px; border-radius:50%; object-fit:cover;">
             <h3 style="margin-top:15px;">Astrologer Naina</h3>
             <p style="opacity:.7;">Vedic Astrology | 12+ Years Exp.</p>
             <button style="padding:10px 20px; margin-top:10px; background:#FFD700; border:none; border-radius:10px; cursor:pointer;">Consult</button>
@@ -1249,7 +1270,7 @@ setInterval(()=>{
         </div>
 
         <div style="width:280px; background:#26004d; padding:20px; border-radius:25px; text-align:center; box-shadow:0 0 20px rgba(255,215,0,0.2);">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbhNmK1ypNhBh4xPIJGrvdBD6jExqy5kVllw&s" style="width:150px; height:150px; border-radius:50%; object-fit:cover;">
+            <img src="https://women.republicnewsindia.com/wp-content/uploads/2024/08/Paramita-Chatterjee-Vishupriya-Paramita-Chatterjee-Vedic-Astrology-780x470.jpeg" style="width:150px; height:150px; border-radius:50%; object-fit:cover;">
             <h3 style="margin-top:15px;">Astrologer Sohini</h3>
             <p style="opacity:.7;">Kundli Expert | 15+ Years Exp.</p>
             <button style="padding:10px 20px; margin-top:10px; background:#FFD700; border:none; border-radius:10px; cursor:pointer;">Consult</button>
@@ -1257,38 +1278,7 @@ setInterval(()=>{
 
     </div>
 </section>
-<!-- Part 17: Astro Store -->
-<section id="store" style="padding:90px 20px; background:#0e001a; color:white;">
-    <h2 style="text-align:center; font-size:50px; font-family:'Playfair Display',serif;">💎 Astro Store</h2>
 
-    <div style="display:flex; justify-content:center; gap:35px; flex-wrap:wrap; margin-top:40px;">
-
-        <div style="width:260px; background:#1f0038; border-radius:20px; padding:20px; text-align:center;">
-            <img src="https://www.gemsinsrilanka.com/wp-content/uploads/2021/01/Blue-Sapphire.jpg" style="width:100%; border-radius:15px;">
-            <h3 style="margin-top:10px;">Blue Sapphire</h3>
-            <p style="opacity:.7;">Boosts career & confidence.</p>
-            <h4 style="color:#FFD700;">₹3500</h4>
-            <button style="padding:10px 20px; background:#FFD700; border:none; border-radius:10px; cursor:pointer;">Buy</button>
-        </div>
-
-        <div style="width:260px; background:#1f0038; border-radius:20px; padding:20px; text-align:center;">
-            <img src="https://aakuraa.com/cdn/shop/files/5__mukhi__nepali__rudraksha__maalaa_54mankaa__aakuraa.png?v=1758273504" style="width:100%; border-radius:15px;">
-            <h3 style="margin-top:10px;">Rudraksha</h3>
-            <p style="opacity:.7;">Brings peace & spiritual growth.</p>
-            <h4 style="color:#FFD700;">₹999</h4>
-            <button style="padding:10px 20px; background:#FFD700; border:none; border-radius:10px; cursor:pointer;">Buy</button>
-        </div>
-
-        <div style="width:260px; background:#1f0038; border-radius:20px; padding:20px; text-align:center;">
-            <img src="https://numeroastro.com/wp-content/uploads/NU-Shri-Yantra-3WM.jpg" style="width:100%; border-radius:15px;">
-            <h3 style="margin-top:10px;">Shri Yantra</h3>
-            <p style="opacity:.7;">Attracts wealth & success.</p>
-            <h4 style="color:#FFD700;">₹550</h4>
-            <button style="padding:10px 20px; background:#FFD700; border:none; border-radius:10px; cursor:pointer;">Buy</button>
-        </div>
-
-    </div>
-</section>
 <!-- ================= MY REMEDIES SECTION ================= -->
 <section id="remedies" style="
     position:relative;
@@ -1766,41 +1756,77 @@ function matchKundli(){
         "Gun Score: <b>"+score+"/36</b><br>"+msg;
 }
 </script>
-<section id="yantra" style="
-padding:80px 20px;
-color:white;
-background: radial-gradient(circle at top, #240035, #0a0014 60%, #000 100%);
-">
+<!-- 🌟 ASTRO STORE + YANTRA STORE (UPGRADED WITH CART BUTTONS) -->
 
-<h2 style="text-align:center;font-size:40px;color:#ffcc00;margin-bottom:30px;">
-    Powerful Yantras
-</h2>
+<section id="store" style="padding:90px 20px; background:#0e001a; color:white;">
+    <h2 style="text-align:center; font-size:50px; font-family:'Playfair Display',serif;">💎 Astro Store</h2>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;">
+    <div style="display:flex; justify-content:center; gap:35px; flex-wrap:wrap; margin-top:40px;">
 
-    <div style="background:#12001f;padding:20px;border-radius:15px;
-    border:1px solid #3a0060;text-align:center;box-shadow:0 0 15px rgba(255,204,0,0.15);">
+        <div style="width:260px; background:#1f0038; border-radius:20px; padding:20px; text-align:center;">
+            <img src="https://www.gemsinsrilanka.com/wp-content/uploads/2021/01/Blue-Sapphire.jpg" style="width:100%; border-radius:15px;">
+            <h3>Blue Sapphire</h3>
+            <p style="opacity:.7;">Boosts career & confidence.</p>
+            <h4 style="color:#FFD700;">₹3500</h4>
+            <button onclick="addToCart('Blue Sapphire',3500)" 
+            style="padding:10px 20px; background:#FFD700; border:none; border-radius:10px;">Add to Cart</button>
+        </div>
+
+        <div style="width:260px; background:#1f0038; border-radius:20px; padding:20px; text-align:center;">
+            <img src="https://aakuraa.com/cdn/shop/files/5__mukhi__nepali__rudraksha__maalaa_54mankaa__aakuraa.png?v=1758273504" style="width:100%; border-radius:15px;">
+            <h3>Rudraksha</h3>
+            <p style="opacity:.7;">Brings peace & spiritual growth.</p>
+            <h4 style="color:#FFD700;">₹999</h4>
+            <button onclick="addToCart('Rudraksha',999)" 
+            style="padding:10px 20px; background:#FFD700; border:none; border-radius:10px;">Add to Cart</button>
+        </div>
+
+        <div style="width:260px; background:#1f0038; border-radius:20px; padding:20px; text-align:center;">
+            <img src="https://numeroastro.com/wp-content/uploads/NU-Shri-Yantra-3WM.jpg" style="width:100%; border-radius:15px;">
+            <h3>Shri Yantra</h3>
+            <p style="opacity:.7;">Attracts wealth & success.</p>
+            <h4 style="color:#FFD700;">₹550</h4>
+            <button onclick="addToCart('Shri Yantra',550)" 
+            style="padding:10px 20px; background:#FFD700; border:none; border-radius:10px;">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- YANTRA SECTION -->
+<section id="yantra" style="padding:80px 20px; color:white; background: radial-gradient(circle at top, #240035, #0a0014 60%, #000 100%);">
+
+<h2 style="text-align:center;font-size:40px;color:#ffcc00;margin-bottom:30px;">Powerful Yantras</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px;">
+
+    <div style="background:#12001f;padding:20px;border-radius:15px;border:1px solid #3a0060;text-align:center;">
         <img src="https://resources.ganeshaspeaks.com/wp-content/uploads/2024/06/shree-01-2-1024x1024.webp" style="width:150px;">
         <h3 style="color:#ffcc00;">Sri Yantra</h3>
         <p>Wealth & prosperity yantra.</p>
-        <a href="#" style="color:#ffcc00;font-weight:bold;">Buy Now</a>
+        <h4 style="color:#FFD700;">₹1200</h4>
+        <button onclick="addToCart('Sri Yantra',1200)" 
+        style="padding:8px 15px; background:#ffcc00; border:none; border-radius:10px;">Add to Cart</button>
     </div>
 
-    <div style="background:#12001f;padding:20px;border-radius:15px;
-    border:1px solid #3a0060;text-align:center;box-shadow:0 0 15px rgba(255,204,0,0.15);">
+    <div style="background:#12001f;padding:20px;border-radius:15px;border:1px solid #3a0060;text-align:center;">
         <img src="https://img.staticmb.com/mbcontent/images/crop/uploads/2023/11/kuber-yantra_0_1200.jpg.webp" style="width:150px;">
         <h3 style="color:#ffcc00;">Kuber Yantra</h3>
         <p>Attracts wealth.</p>
-        <a href="#" style="color:#ffcc00;font-weight:bold;">Buy Now</a>
+        <h4 style="color:#FFD700;">₹1600</h4>
+        <button onclick="addToCart('Kuber Yantra',1600)" 
+        style="padding:8px 15px; background:#ffcc00; border:none; border-radius:10px;">Add to Cart</button>
     </div>
 
-    <div style="background:#12001f;padding:20px;border-radius:15px;
-    border:1px solid #3a0060;text-align:center;box-shadow:0 0 15px rgba(255,204,0,0.15);">
+    <div style="background:#12001f;padding:20px;border-radius:15px;border:1px solid #3a0060;text-align:center;">
         <img src="https://admin.chhayakart.com/storage/products/1723108263_86399.jpg" style="width:150px;">
         <h3 style="color:#ffcc00;">Mahamrityunjay Yantra</h3>
         <p>Health & protection.</p>
-        <a href="#" style="color:#ffcc00;font-weight:bold;">Buy Now</a>
+        <h4 style="color:#FFD700;">₹1800</h4>
+        <button onclick="addToCart('Mahamrityunjay Yantra',1800)" 
+        style="padding:8px 15px; background:#ffcc00; border:none; border-radius:10px;">Add to Cart</button>
     </div>
 
 </div>
@@ -2099,7 +2125,7 @@ function closeDonation(){
             text-align:center;
             transition:0.3s;
         ">
-            <img src="https://www.kerala-astrologer.com/wp-content/uploads/2022/05/comressed.jpg" style="
+            <img src="https://prashnakundli.com/wp-content/uploads/2025/07/3-7-1024x1024.png" style="
                 width:120px;height:120px;border-radius:50%;margin-bottom:15px;
             ">
             <h3 style="color:#ffcc00; margin-bottom:5px;">Astrologer Mahesh</h3>
@@ -2130,7 +2156,7 @@ function closeDonation(){
             text-align:center;
             transition:0.3s;
         ">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL5kLl1aoTNwi72P7dFlgW3YRoA60HwqsGUg&s" style="
+            <img src="https://cdn.anytimeastro.com/dashaspeaks/experts/gallary/live/5080173/thumb_8f31391f-29cd-4972-8197-3fe92b0d8c70.jpg" style="
                 width:120px;height:120px;border-radius:50%;margin-bottom:15px;
             ">
             <h3 style="color:#ffcc00; margin-bottom:5px;">Astrologer Kriti</h3>
@@ -2161,7 +2187,7 @@ function closeDonation(){
             text-align:center;
             transition:0.3s;
         ">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV6ImI3UO_15DCk1dMgCFs1pPdzPs6mcdvEQ&s" style="
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSUnsAO5-bb0zRPucxfRu8J_5xM25sL1OkKw&s" style="
                 width:120px;height:120px;border-radius:50%;margin-bottom:15px;
             ">
             <h3 style="color:#ffcc00; margin-bottom:5px;">Astrologer Aryan</h3>
@@ -2544,28 +2570,128 @@ document.getElementById("mantraBox").innerHTML = mantras[day % mantras.length];
 
     </div>
 </section>
+<!-- ⭐ Part 18: Contact + Map (ASTRO PREMIUM STYLE) -->
+<section id="contact" style="
+    padding:90px 20px;
+    background: radial-gradient(circle at top, #240035, #0a0014 60%, #000 100%);
+    color:white;
+    position:relative;
+    overflow:hidden;
+">
 
+    <!-- STAR OVERLAY -->
+    <div style="
+        position:absolute;
+        top:0; left:0;
+        width:100%; height:100%;
+        background:url('https://i.imgur.com/eQZ8ZQM.png');
+        opacity:0.18;
+        pointer-events:none;
+    "></div>
 
-<!-- Part 18: Contact + Map -->
-<section id="contact" style="padding:90px 20px; background:#14001e; color:white;">
-    <h2 style="text-align:center; font-size:50px; font-family:'Playfair Display',serif;">📞 Contact Us</h2>
+    <!-- HEADING -->
+    <h2 style="
+        text-align:center;
+        font-size:50px;
+        font-family:'Playfair Display', serif;
+        color:#ffcc00;
+        font-weight:700;
+        margin-bottom:40px;
+        text-shadow:0 0 25px rgba(255,204,0,0.6);
+    ">
+        📞 Contact Our Astrology Center 📞
+    </h2>
 
-    <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:50px;">
+    <!-- MAIN FLEX -->
+    <div style="
+        display:flex;
+        justify-content:center;
+        gap:40px;
+        flex-wrap:wrap;
+        margin-top:40px;
+        position:relative;
+        z-index:2;
+    ">
 
-        <form style="background:#260046; padding:30px; border-radius:25px; width:350px;">
-            <input type="text" placeholder="Name" style="padding:12px; width:100%; border-radius:10px; margin-bottom:10px;">
-            <input type="email" placeholder="Email" style="padding:12px; width:100%; border-radius:10px; margin-bottom:10px;">
-            <textarea placeholder="Message" style="padding:12px; width:100%; border-radius:10px; height:120px;"></textarea>
-            <button style="padding:10px 20px; background:#FFD700; border:none; border-radius:10px; cursor:pointer; margin-top:10px;">Send</button>
+        <!-- CONTACT FORM -->
+        <form style="
+            background:rgba(255,255,255,0.05);
+            backdrop-filter:blur(12px);
+            padding:35px;
+            border-radius:25px;
+            width:360px;
+            border:1px solid rgba(255,204,0,0.3);
+            box-shadow:0 0 25px rgba(255,204,0,0.25);
+        ">
+
+            <h3 style="color:#ffcc00; text-align:center; margin-bottom:20px;">
+                Send Us a Message
+            </h3>
+
+            <input type="text" placeholder="Full Name" style="
+                padding:14px;
+                width:100%;
+                border-radius:12px;
+                margin-bottom:12px;
+                background:#1a0030;
+                border:1px solid #3a0065;
+                color:white;
+            ">
+
+            <input type="email" placeholder="Email Address" style="
+                padding:14px;
+                width:100%;
+                border-radius:12px;
+                margin-bottom:12px;
+                background:#1a0030;
+                border:1px solid #3a0065;
+                color:white;
+            ">
+
+            <textarea placeholder="Your Message" style="
+                padding:14px;
+                width:100%;
+                height:130px;
+                border-radius:12px;
+                background:#1a0030;
+                border:1px solid #3a0065;
+                color:white;
+            "></textarea>
+
+            <button style="
+                padding:14px;
+                width:100%;
+                background:#ffcc00;
+                border:none;
+                border-radius:12px;
+                font-size:18px;
+                cursor:pointer;
+                margin-top:12px;
+                font-weight:bold;
+                color:black;
+            ">
+                Send Message
+            </button>
+
         </form>
 
+        <!-- MAP -->
         <iframe 
-          src="https://maps.google.com/maps?q=New%20Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          width="400" height="300" style="border:0; border-radius:20px;">
+            src="https://maps.google.com/maps?q=New%20Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="420" 
+            height="340" 
+            style="
+                border:0; 
+                border-radius:20px;
+                box-shadow:0 0 25px rgba(255,204,0,0.25);
+            ">
         </iframe>
 
     </div>
 </section>
+
+
+
 <!-- Part 19: Chatbot -->
 <div onclick="openBot()" style="position:fixed; bottom:30px; left:30px; background:#FFD700; padding:18px; border-radius:50%; cursor:pointer; z-index:999; box-shadow:0 0 20px gold;">
     🔮
@@ -2707,51 +2833,146 @@ function sendBot(){
 
 
    
-<!-- ❓ PART 24 — FAQ -->
-
+<!-- 🌙✨ PART 24 — PREMIUM FAQ SECTION -->
 <section class="faq-section" id="faq">
     <h2 class="astro-section-title">❓ Frequently Asked Questions</h2>
 
     <div class="faq-box">
+
         <div class="faq-item" onclick="toggleFaq(this)">
-            <h4>How accurate are these predictions?</h4>
-            <p>Predictions are based on Vedic astrology algorithms & tested logic.</p>
+            <div class="faq-question">
+                <h4>How accurate are your astrology predictions?</h4>
+                <span class="faq-icon">+</span>
+            </div>
+            <p>Our predictions follow authentic Vedic Astrology using birth charts, planetary positions & advanced astrological calculations.</p>
         </div>
 
         <div class="faq-item" onclick="toggleFaq(this)">
-            <h4>Can I talk to a live astrologer?</h4>
-            <p>Yes, we offer real-time chat & call sessions.</p>
+            <div class="faq-question">
+                <h4>Can I speak with a live astrologer?</h4>
+                <span class="faq-icon">+</span>
+            </div>
+            <p>Yes! We provide live 1-on-1 chat, voice call & video call consultations with certified astrologers.</p>
         </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                <h4>Is my personal information safe?</h4>
+                <span class="faq-icon">+</span>
+            </div>
+            <p>Your data is 100% encrypted. We do not share any private details with anyone.</p>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                <h4>Do you provide remedies based on my Kundli?</h4>
+                <span class="faq-icon">+</span>
+            </div>
+            <p>Yes, we offer gemstone suggestion, mantra remedies & detailed personal guidance based on your Kundli.</p>
+        </div>
+
     </div>
 </section>
 
+<!-- 🎨 STYLE -->
 <style>
-.faq-section { padding:70px 8%;background:#13121b;color:white; }
-.faq-item { background:#1b1a23;padding:20px;border-radius:10px;margin-bottom:15px;cursor:pointer; }
-.faq-item p { display:none;margin-top:10px;opacity:.8; }
+.faq-section{
+    padding:80px 10%;
+    background:#0e0018;
+    color:white;
+    text-align:center;
+}
+
+.astro-section-title{
+    font-size:45px;
+    font-family:'Playfair Display', serif;
+    margin-bottom:40px;
+    color:#FFD700;
+    text-shadow:0 0 12px rgba(255,215,0,0.6);
+}
+
+.faq-box{
+    max-width:850px;
+    margin:auto;
+}
+
+.faq-item{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,215,0,0.2);
+    padding:20px 25px;
+    border-radius:14px;
+    margin-bottom:18px;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.faq-item:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(255,215,0,0.2);
+}
+
+.faq-question{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.faq-item h4{
+    font-size:20px;
+    margin:0;
+    color:#FFD700;
+}
+
+.faq-icon{
+    font-size:26px;
+    transition:0.3s;
+}
+
+.faq-item p{
+    display:none;
+    margin-top:12px;
+    font-size:15px;
+    opacity:0.85;
+    line-height:1.6;
+}
 </style>
 
+<!-- ⚡ SCRIPT -->
 <script>
 function toggleFaq(el){
-    let p = el.querySelector("p");
-    p.style.display = p.style.display === "block" ? "none" : "block";
+    const p = el.querySelector("p");
+    const icon = el.querySelector(".faq-icon");
+
+    if(p.style.display === "block"){
+        p.style.display = "none";
+        icon.textContent = "+";
+    } else {
+        p.style.display = "block";
+        icon.textContent = "-";
+    }
 }
 </script>
-
-</script>
-<!-- 🟣 PART 26 — LIVE CHAT WITH ASTROLOGER -->
+<!-- 🟣 PART 26 — LIVE CHAT WITH ASTROLOGER (UPGRADED) -->
 
 <section id="liveChat" class="chat-section">
     <h2 class="astro-section-title">💬 Live Chat With Astrologer</h2>
 
     <div class="chat-window">
+        
         <div class="chat-header">
-            <h4>Astrologer Priya (Online)</h4>
+            <div style="display:flex;align-items:center;gap:10px;">
+                <img src="https://i.ibb.co/GV2wVxR/astro-woman.jpg" 
+                     style="width:42px;height:42px;border-radius:50%;object-fit:cover;">
+                <div>
+                    <h4 style="margin:0;">Astrologer Priya</h4>
+                    <small style="color:#00ff7b;">Online Now</small>
+                </div>
+            </div>
             <span class="online-dot"></span>
         </div>
 
         <div class="chat-body" id="chatBody">
-            <div class="msg bot">Namaste 🙏 How may I assist you today?</div>
+            <div class="msg bot">Namaste 🙏 I’m here to guide you. How may I help you today?</div>
         </div>
 
         <div class="chat-input">
@@ -2762,53 +2983,144 @@ function toggleFaq(el){
 </section>
 
 <style>
-.chat-section { padding:80px 8%; background:#12111a; color:white; }
+.chat-section { padding:80px 8%; background:#0e0018; color:white; }
+
 .chat-window {
-    max-width:600px;margin:auto;background:#1b1a23;
-    border-radius:10px;border:1px solid #333;
+    max-width:620px;margin:auto;
+    background:#1b1a23;
+    border-radius:14px;
+    border:1px solid rgba(255,215,0,0.3);
+    box-shadow:0 0 25px rgba(255,215,0,0.1);
 }
+
+/* Header */
 .chat-header {
-    padding:15px;background:#252432;display:flex;align-items:center;gap:10px;
+    padding:15px 20px;
+    background:#251a32;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-radius:14px 14px 0 0;
+    border-bottom:1px solid rgba(255,215,0,0.2);
 }
 .online-dot {
-    width:10px;height:10px;background:#00ff7b;border-radius:50%;
+    width:12px;height:12px;
+    background:#00ff7b;
+    border-radius:50%;
+    box-shadow:0 0 8px #00ff7b;
+    animation:pulse 1.4s infinite;
 }
+@keyframes pulse {
+    0% { transform:scale(1); }
+    50% { transform:scale(1.3); }
+    100% { transform:scale(1); }
+}
+
+/* Chat body */
 .chat-body {
-    height:300px;overflow-y:auto;padding:15px;
+    height:340px;
+    overflow-y:auto;
+    padding:20px;
+    scroll-behavior:smooth;
 }
+
 .msg {
-    padding:12px 15px;margin-bottom:10px;border-radius:10px;max-width:70%;
+    padding:14px 16px;
+    margin-bottom:12px;
+    border-radius:14px;
+    max-width:75%;
+    line-height:1.5;
+    font-size:15px;
 }
-.bot { background:#2a2938;color:#ffd56b; }
-.user { background:#4c4b59;margin-left:auto; }
-.chat-input { display:flex;border-top:1px solid #333; }
-.chat-input input { flex:1;padding:12px;background:#111;color:white;border:none; }
-.chat-input button { padding:12px 20px;border:none;background:#ffd56b;color:black;font-weight:bold; }
+.bot {
+    background:#2c2440;
+    color:#ffd56b;
+    border-left:3px solid #ffd56b;
+}
+.user {
+    background:#4c445e;
+    color:#fff;
+    margin-left:auto;
+    border-right:3px solid #ffd56b;
+}
+
+/* Input area */
+.chat-input {
+    display:flex;
+    border-top:1px solid rgba(255,215,0,0.2);
+}
+.chat-input input {
+    flex:1;
+    padding:14px;
+    background:#120b1e;
+    color:white;
+    border:none;
+}
+.chat-input button {
+    padding:14px 22px;
+    border:none;
+    background:#ffd56b;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+}
+.chat-input button:hover {
+    background:#ffe58f;
+}
 </style>
 
 <script>
 function sendMsg(){
-    let userMsg = document.getElementById("userMsg");
-    if(userMsg.value.trim() === "") return;
-
+    let msgBox = document.getElementById("userMsg");
     let chatBody = document.getElementById("chatBody");
 
+    if(msgBox.value.trim() === "") return;
+
+    // USER MESSAGE
     let userDiv = document.createElement("div");
     userDiv.className = "msg user";
-    userDiv.innerText = userMsg.value;
+    userDiv.innerText = msgBox.value;
     chatBody.appendChild(userDiv);
 
-    setTimeout(() => {
-        let botDiv = document.createElement("div");
-        botDiv.className = "msg bot";
-        botDiv.innerText = "I am checking planetary positions... 🔮";
-        chatBody.appendChild(botDiv);
-    }, 600);
+    chatBody.scrollTop = chatBody.scrollHeight;
 
-    userMsg.value = "";
+    // BOT TYPING EFFECT
+    setTimeout(() => {
+        let typing = document.createElement("div");
+        typing.className = "msg bot";
+        typing.innerText = "⌛ Checking planetary positions...";
+        chatBody.appendChild(typing);
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        // REMOVE TYPING + SHOW REAL REPLY
+        setTimeout(() => {
+            typing.remove();
+
+            let botDiv = document.createElement("div");
+            botDiv.className = "msg bot";
+
+            // RANDOM REAL ASTROLOGER STYLE ANSWERS
+            let replies = [
+                "Based on your question, I see a positive shift coming in your stars within the next 21 days ✨",
+                "Your ruling planet is influencing your emotions strongly today. Stay calm and trust the process 🔮",
+                "There is a favorable planetary alignment for your career soon. Make confident decisions 🌟",
+                "Your Kundli suggests a transformation phase—be patient, good things are on the way 🙏",
+                "Someone close may bring good news for you soon. Stay open to conversations 💫",
+                "Your energy chart shows spiritual growth. Meditation would benefit you greatly 🌙"
+            ];
+
+            botDiv.innerText = replies[Math.floor(Math.random() * replies.length)];
+            chatBody.appendChild(botDiv);
+
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+        }, 1300);
+
+    }, 500);
+
+    msgBox.value = "";
 }
 </script>
-
 
 
 
@@ -2836,65 +3148,179 @@ function hidePWA(){ document.getElementById("pwaBox").style.display="none"; }
 </script>
 
 
-<!-- ================= DASHBOARD ================= -->
-<section id="dashboard" class="dashboard-section">
+<!-- ================= DASHBOARD (UPDATED WITH CART) ================= -->
+<section id="dashboard" class="dashboard-section" style="
+    padding:0;
+    background:#0a0014;
+    color:white;
+    font-family:Poppins,sans-serif;
+">
 
-    <div class="dash-container">
+<div class="dash-container" style="display:flex; min-height:100vh;">
 
-        <!-- Sidebar -->
-        <aside class="dash-sidebar">
-            <h2 class="dash-logo">🔮 My Dashboard</h2>
+    <!-- Sidebar -->
+    <aside class="dash-sidebar" style="
+        width:260px;
+        background:#180025;
+        padding:25px;
+        border-right:1px solid #300040;
+    ">
+        <h2 style="color:#ffcc00; margin-bottom:25px; text-align:center;">🔮 My Dashboard</h2>
 
-            <a class="dash-link active">📜 My Horoscope</a>
-            <a class="dash-link">🪔 My Remedies</a>
-            <a class="dash-link">📅 My Appointments</a>
-            <a class="dash-link">🙏 My Pooja Bookings</a>
-            <a class="dash-link">💳 Payments</a>
-            <a class="dash-link">👤 Profile</a>
-            <a class="dash-link logout">🚪 Logout</a>
-        </aside>
+        <a class="dash-link" style="display:block; padding:12px; cursor:pointer;">🛒 My Cart</a>
+        <a class="dash-link" style="display:block; padding:12px; cursor:pointer;">🪔 My Remedies</a>
+        <a class="dash-link" style="display:block; padding:12px; cursor:pointer;">📅 My Appointments</a>
+        <a class="dash-link" style="display:block; padding:12px; cursor:pointer;">🙏 My Pooja Bookings</a>
+        <a class="dash-link" style="display:block; padding:12px; cursor:pointer;">👤 Profile</a>
 
-        <!-- Main Content -->
-        <div class="dash-main">
+        <a onclick="logoutUser()" style="
+            display:block; padding:12px; margin-top:20px;
+            background:#ff4444; color:white; border-radius:8px; cursor:pointer;
+            text-align:center; font-weight:bold;
+        ">🚪 Logout</a>
+    </aside>
 
-            <h2 class="gold-title">Welcome Back, User ✨</h2>
+    <!-- Main Content -->
+    <div class="dash-main" style="flex:1; padding:40px;">
 
-            <div class="dash-cards">
+        <h2 style="font-size:32px; color:#ffcc00; margin-bottom:25px;">Welcome Back, User ✨</h2>
 
-                <div class="dash-card">
-                    <h3>📜 Today's Horoscope</h3>
-                    <p>You will achieve success in work and finance today.</p>
-                    <button>Read More</button>
-                </div>
+        <!-- PRODUCT STORE -->
+        <h3 style="color:#ffcc00; margin-bottom:10px;">🛍 Shop Astrology Items</h3>
 
-                <div class="dash-card">
-                    <h3>📅 Next Appointment</h3>
-                    <p>No appointment scheduled.</p>
-                    <button>Book Now</button>
-                </div>
+        <div style="display:flex; flex-wrap:wrap; gap:20px; margin-bottom:50px;">
 
-                <div class="dash-card">
-                    <h3>🪔 Active Remedies</h3>
-                    <p>2 remedies in progress.</p>
-                    <button>View Remedies</button>
-                </div>
+            <!-- Product 1 -->
+            <div class="product" style="
+                width:220px; background:#160022; padding:15px;
+                border-radius:12px; border:1px solid #32004f;
+            ">
+                <img src="https://norbulingka.org/cdn/shop/files/OMWR00000-1.webp?v=1723197195&width=2048" style="width:100%; border-radius:10px;">
+                <h4>Rudraksha Mala</h4>
+                <p>₹499</p>
+                <button onclick="addToCart('Rudraksha Mala',499)" style="
+                    width:100%; background:#ffcc00; border:none;
+                    padding:10px; border-radius:10px; cursor:pointer; font-weight:bold;
+                ">Add to Cart</button>
+            </div>
 
-                <div class="dash-card">
-                    <h3>🙏 Pooja Bookings</h3>
-                    <p>No active pooja booking.</p>
-                    <button>Book Pooja</button>
-                </div>
+            <!-- Product 2 -->
+            <div class="product" style="
+                width:220px; background:#160022; padding:15px;
+                border-radius:12px; border:1px solid #32004f;
+            ">
+                <img src="https://img.freepik.com/free-photo/colorful-crystals-flowers-assortment_23-2149324181.jpg" style="width:100%; border-radius:10px;">
+                <h4>Healing Crystal</h4>
+                <p>₹799</p>
+                <button onclick="addToCart('Healing Crystal',799)" style="
+                    width:100%; background:#ffcc00; border:none;
+                    padding:10px; border-radius:10px; cursor:pointer; font-weight:bold;
+                ">Add to Cart</button>
+            </div>
 
+            <!-- Product 3 -->
+            <div class="product" style="
+                width:220px; background:#160022; padding:15px;
+                border-radius:12px; border:1px solid #32004f;
+            ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrV1KrvrGPxoYZ2ZXF20qPLEbIo997KusSig&s" style="width:100%; border-radius:10px;">
+                <h4>Shri Yantra</h4>
+                <p>₹999</p>
+                <button onclick="addToCart('Shri Yantra',999)" style="
+                    width:100%; background:#ffcc00; border:none;
+                    padding:10px; border-radius:10px; cursor:pointer; font-weight:bold;
+                ">Add to Cart</button>
             </div>
 
         </div>
-        
+
+
+        <!-- ================== CART SECTION ================== -->
+        <h3 style="color:#ffcc00; margin-bottom:10px;">🛒 Your Cart</h3>
+
+        <div id="cartItems" style="
+            background:#160022; padding:20px; border-radius:12px;
+            border:1px solid #32004f; min-height:100px;
+        ">
+            <p style="opacity:0.7;">Your cart is empty.</p>
+        </div>
+
+        <h3 id="totalAmount" style="margin-top:20px; color:#ffcc00;">
+            Total: ₹0
+        </h3>
+
+        <button onclick="makePayment()" style="
+            background:#00ff84; padding:12px 20px;
+            border:none; border-radius:10px; margin-top:15px;
+            font-weight:bold; cursor:pointer;
+        ">Pay Now</button>
+
     </div>
+</div>
+
 </section>
 
+<!-- ================= JS CART SYSTEM ================= -->
+<script>
+let cart = [];
 
+function addToCart(name, price){
+    cart.push({name, price});
+    updateCart();
+}
 
+function updateCart(){
+    let container = document.getElementById("cartItems");
+    container.innerHTML = "";
 
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        total += item.price;
+
+        container.innerHTML += `
+            <div style="
+                display:flex; justify-content:space-between;
+                background:#1f0033; padding:12px; border-radius:10px;
+                margin-bottom:10px;
+            ">
+                <span>${item.name} - ₹${item.price}</span>
+                <button onclick="removeItem(${index})" style="
+                    background:red; color:white; padding:5px 10px;
+                    border:none; border-radius:6px; cursor:pointer;
+                ">X</button>
+            </div>
+        `;
+    });
+
+    document.getElementById("totalAmount").innerText = "Total: ₹" + total;
+
+    if(cart.length === 0){
+        container.innerHTML = `<p style="opacity:0.7;">Your cart is empty.</p>`;
+        document.getElementById("totalAmount").innerText = "Total: ₹0";
+    }
+}
+
+function removeItem(index){
+    cart.splice(index,1);
+    updateCart();
+}
+
+function makePayment(){
+    if(cart.length === 0){
+        alert("Your cart is empty!");
+        return;
+    }
+    alert("Payment Successful! Thank you 🙏");
+    cart = [];
+    updateCart();
+}
+
+function logoutUser(){
+    alert("Logged out successfully!");
+    window.location.href = "#home";
+}
+</script>
 
 
 
